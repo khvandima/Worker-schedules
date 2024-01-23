@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>25</string>
+					<key>EndingLineNumber</key>
+					<string>33</string>
+					<key>StartingColumnNumber</key>
+					<string>16</string>
+					<key>StartingLineNumber</key>
+					<string>33</string>
+					<key>Timestamp</key>
+					<string>727343125.7850159</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Worker schedules/View/Workers/AdWorkerSheetView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>TextField</string>
+				<key>leading</key>
+				<string>                    .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1.0)))
+                
+                </string>
+				<key>trailing</key>
+				<string>("Phone", text: $phone)
+                    .keyboardType(.decimalPad)
+                    .padding()
+</string>
+			</dict>
+			<key>title</key>
+			<string>Сделать маску для номера телефона</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>73</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>72</string>
+					<key>Timestamp</key>
+					<string>727664401.9353319</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Worker schedules/View/Workers/AllView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>            .sheet(isPresented: $showSheet, content: {
+</string>
+				<key>leading</key>
+				<string>                }
+            }
+</string>
+				<key>trailing</key>
+				<string>                AdWorkerSheetView()
+                
+                
+</string>
+			</dict>
+			<key>title</key>
+			<string>Sheet с измененным цветом background</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>37</string>
+					<key>EndingLineNumber</key>
+					<string>66</string>
+					<key>StartingColumnNumber</key>
+					<string>35</string>
+					<key>StartingLineNumber</key>
+					<string>66</string>
+					<key>Timestamp</key>
+					<string>727666594.017375</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Worker schedules/View/Workers/EditWorkerView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>to</string>
+				<key>leading</key>
+				<string>            }
+            
+            //TODO: Create buttons </string>
+				<key>trailing</key>
+				<string> save or calcel on change state
+        }
+        .onAppear{
+</string>
+			</dict>
+			<key>title</key>
+			<string>Добавить кнопки Сохранить или отменить</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>

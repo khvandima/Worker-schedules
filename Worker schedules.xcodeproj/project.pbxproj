@@ -14,6 +14,15 @@
 		0AB8043B2B57B0DC009AC39C /* Worker_schedulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8043A2B57B0DC009AC39C /* Worker_schedulesTests.swift */; };
 		0AB804452B57B0DC009AC39C /* Worker_schedulesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB804442B57B0DC009AC39C /* Worker_schedulesUITests.swift */; };
 		0AB804472B57B0DC009AC39C /* Worker_schedulesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB804462B57B0DC009AC39C /* Worker_schedulesUITestsLaunchTests.swift */; };
+		0AB804592B57B244009AC39C /* InThisWeekPage().swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB804582B57B244009AC39C /* InThisWeekPage().swift */; };
+		0AB8045B2B57B26F009AC39C /* FactoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8045A2B57B26F009AC39C /* FactoriesView.swift */; };
+		0AB8045D2B57B28B009AC39C /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8045C2B57B28B009AC39C /* AllView.swift */; };
+		0AB804632B58E911009AC39C /* WorkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB804622B58E911009AC39C /* WorkerModel.swift */; };
+		0AB804652B58E923009AC39C /* FactoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB804642B58E923009AC39C /* FactoryModel.swift */; };
+		0AB804682B58EE2A009AC39C /* SwiftData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB804672B58EE2A009AC39C /* SwiftData.framework */; };
+		0AB8046A2B58EE34009AC39C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB804692B58EE34009AC39C /* SwiftUI.framework */; };
+		0AFDBDC72B5A30CA00394C6B /* AdWorkerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDBDC62B5A30CA00394C6B /* AdWorkerSheetView.swift */; };
+		0AFDBDC92B5B2AE300394C6B /* EditWorkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDBDC82B5B2AE300394C6B /* EditWorkerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		0AB804402B57B0DC009AC39C /* Worker schedulesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Worker schedulesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB804442B57B0DC009AC39C /* Worker_schedulesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker_schedulesUITests.swift; sourceTree = "<group>"; };
 		0AB804462B57B0DC009AC39C /* Worker_schedulesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker_schedulesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AB804582B57B244009AC39C /* InThisWeekPage().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InThisWeekPage().swift"; sourceTree = "<group>"; };
+		0AB8045A2B57B26F009AC39C /* FactoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoriesView.swift; sourceTree = "<group>"; };
+		0AB8045C2B57B28B009AC39C /* AllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
+		0AB804622B58E911009AC39C /* WorkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerModel.swift; sourceTree = "<group>"; };
+		0AB804642B58E923009AC39C /* FactoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryModel.swift; sourceTree = "<group>"; };
+		0AB804672B58EE2A009AC39C /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
+		0AB804692B58EE34009AC39C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0AFDBDC62B5A30CA00394C6B /* AdWorkerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdWorkerSheetView.swift; sourceTree = "<group>"; };
+		0AFDBDC82B5B2AE300394C6B /* EditWorkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB8046A2B58EE34009AC39C /* SwiftUI.framework in Frameworks */,
+				0AB804682B58EE2A009AC39C /* SwiftData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,7 @@
 				0AB804392B57B0DC009AC39C /* Worker schedulesTests */,
 				0AB804432B57B0DC009AC39C /* Worker schedulesUITests */,
 				0AB804272B57B0DB009AC39C /* Products */,
+				0AB804662B58EE2A009AC39C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +115,8 @@
 		0AB804282B57B0DB009AC39C /* Worker schedules */ = {
 			isa = PBXGroup;
 			children = (
+				0AB804542B57B1B8009AC39C /* View */,
+				0AB804532B57B1AE009AC39C /* Model */,
 				0AB804292B57B0DB009AC39C /* Worker_schedulesApp.swift */,
 				0AB8042B2B57B0DB009AC39C /* ContentView.swift */,
 				0AB8042D2B57B0DC009AC39C /* Assets.xcassets */,
@@ -125,6 +148,60 @@
 				0AB804462B57B0DC009AC39C /* Worker_schedulesUITestsLaunchTests.swift */,
 			);
 			path = "Worker schedulesUITests";
+			sourceTree = "<group>";
+		};
+		0AB804532B57B1AE009AC39C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AB804622B58E911009AC39C /* WorkerModel.swift */,
+				0AB804642B58E923009AC39C /* FactoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AB804542B57B1B8009AC39C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AB804572B57B1E6009AC39C /* Workers */,
+				0AB804562B57B1D8009AC39C /* Factories */,
+				0AB804552B57B1C7009AC39C /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AB804552B57B1C7009AC39C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0AB804582B57B244009AC39C /* InThisWeekPage().swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0AB804562B57B1D8009AC39C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8045A2B57B26F009AC39C /* FactoriesView.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		0AB804572B57B1E6009AC39C /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8045C2B57B28B009AC39C /* AllView.swift */,
+				0AFDBDC62B5A30CA00394C6B /* AdWorkerSheetView.swift */,
+				0AFDBDC82B5B2AE300394C6B /* EditWorkerView.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		0AB804662B58EE2A009AC39C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AB804692B58EE34009AC39C /* SwiftUI.framework */,
+				0AB804672B58EE2A009AC39C /* SwiftData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB8042C2B57B0DB009AC39C /* ContentView.swift in Sources */,
+				0AB8045D2B57B28B009AC39C /* AllView.swift in Sources */,
+				0AB8045B2B57B26F009AC39C /* FactoriesView.swift in Sources */,
+				0AFDBDC92B5B2AE300394C6B /* EditWorkerView.swift in Sources */,
+				0AB804652B58E923009AC39C /* FactoryModel.swift in Sources */,
+				0AB804592B57B244009AC39C /* InThisWeekPage().swift in Sources */,
+				0AFDBDC72B5A30CA00394C6B /* AdWorkerSheetView.swift in Sources */,
 				0AB8042A2B57B0DB009AC39C /* Worker_schedulesApp.swift in Sources */,
+				0AB804632B58E911009AC39C /* WorkerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,13 +506,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Worker schedules/Preview Content\"";
+				DEVELOPMENT_TEAM = D4XM4VN752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,9 +523,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khvandima.Worker-schedules";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,13 +540,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Worker schedules/Preview Content\"";
+				DEVELOPMENT_TEAM = D4XM4VN752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,9 +557,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khvandima.Worker-schedules";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
