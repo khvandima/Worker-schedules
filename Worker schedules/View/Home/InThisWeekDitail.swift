@@ -60,11 +60,11 @@ struct InThisWeekDitail: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
-                
+
                 // TabView
                 TabView(selection: $tabSelectedValue) {
                     Section {
-                        if factory.workers.isEmpty {
+                        if resultsDayItems.isEmpty {
                             VStack {
                                 Image(systemName: "person.3.fill")
                                     .resizable()
@@ -88,8 +88,15 @@ struct InThisWeekDitail: View {
                                             Spacer()
                                             
                                             Button {
-                                                guard let url = URL(string: "tel:\(worker.name)") else { return }
-//                                                Link(worker.name, destination: url)
+                                                let phoneNumber = worker.phone.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+                                                guard let url = URL(string: "tel://\(phoneNumber)") else { return }
+        //                                        Link(worker.name, destination: url)
+                                                
+                                                if UIApplication.shared.canOpenURL(url) {
+                                                            UIApplication.shared.open(url)
+                                                        } else {
+                                                            print("Can't open url on this device")
+                                                        }
                                                 
         //                                        UIApplication.shared.open(url)
                                             } label: {
@@ -115,8 +122,10 @@ struct InThisWeekDitail: View {
                         }
                     }
                     .tag(0)
+                    .navigationBarHidden(true)
+                    .toolbar(.hidden, for: .tabBar)
                     Section {
-                        if factory.workers.isEmpty {
+                        if resultsNightItems.isEmpty {
                             VStack {
                                 Image(systemName: "person.3.fill")
                                     .resizable()
@@ -140,8 +149,15 @@ struct InThisWeekDitail: View {
                                             Spacer()
                                             
                                             Button {
-                                                guard let url = URL(string: "tel:\(worker.name)") else { return }
-//                                                Link(worker.name, destination: url)
+                                                let phoneNumber = worker.phone.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+                                                guard let url = URL(string: "tel://\(phoneNumber)") else { return }
+        //                                        Link(worker.name, destination: url)
+                                                
+                                                if UIApplication.shared.canOpenURL(url) {
+                                                            UIApplication.shared.open(url)
+                                                        } else {
+                                                            print("Can't open url on this device")
+                                                        }
                                                 
         //                                        UIApplication.shared.open(url)
                                             } label: {
@@ -167,8 +183,9 @@ struct InThisWeekDitail: View {
                         }
                     }
                     .tag(1)
+                    .navigationBarHidden(true)
+                    .toolbar(.hidden, for: .tabBar)
                 }
-                Spacer()
             }
             // Custom NavigationLonk Back button
             VStack {

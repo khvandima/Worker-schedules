@@ -46,11 +46,21 @@ struct AllView: View {
                                     Text(worker.factory?.factoryName ?? "WK")
                                         .padding(.horizontal)
                                         .font(.subheadline)
+                                    
                                     Button {
-                                        guard let url = URL(string: "tel:\(worker.name)") else { return }
-                                        Link(worker.name, destination: url)
+                                        let phoneNumber = worker.phone.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+                                        guard let url = URL(string: "tel://\(phoneNumber)") else { return }
+//                                        Link(worker.name, destination: url)
                                         
-//                                        UIApplication.shared.open(url)  
+                                        if UIApplication.shared.canOpenURL(url) {
+                                                    UIApplication.shared.open(url)
+                                                } else {
+                                                    print("Can't open url on this device")
+                                                }
+                                        
+                                        
+                                        
+//                                        UIApplication.shared.open(url)
                                     } label: {
                                         Image(systemName: "phone.circle")
                                             .font(.title)
