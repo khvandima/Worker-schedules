@@ -12,7 +12,6 @@ struct FactoryWorkersEditView: View {
     
     let factory: Factory
     
-    
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
     
@@ -147,12 +146,5 @@ struct FactoryWorkersEditCard: View {
 
 
 //#Preview {
-//    let preview = Preview(Worker.self)
-////    let workers = Worker.sampleWorkers
-//    let factories = Factory.sampleFactories
-//    preview.addExamples(workers)
-//    preview.addExamples(factories)
-////    factories[1].workers.append(workers[0])
-//    return FactoryWorkersEditView(factory: factories[1])
-//        .modelContainer(preview.container)
+//    FactoryWorkersEditView(factory: factories[1])
 //}

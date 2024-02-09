@@ -18,8 +18,7 @@ struct ContentView: View {
             InThisWeekPage()
                 .tabItem {
                     Image(systemName: "house")
-                    Text("Home")
-                       
+                    Text("Home")    
                 }
                 .toolbarBackground(Color.black.opacity(0.8),for: .tabBar)
             
@@ -36,13 +35,6 @@ struct ContentView: View {
                     Text("All")
                 }
                 .toolbarBackground(Color.black.opacity(0.8),for: .tabBar)
-//            SearchAdressView()
-//                .tabItem {
-//                    Image(systemName: "map")
-//                    Text("All")
-//                }
-//                .toolbarBackground(Color.black.opacity(0.8),for: .tabBar)
-//                
         }
         .onAppear{
             CLLocationManager().requestWhenInUseAuthorization()

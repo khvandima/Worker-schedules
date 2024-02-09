@@ -25,7 +25,6 @@ struct EditWorkerView: View {
     @State private var oldFactoryIndex: Int = 0
     @State var selectPlace: Location
     
-    
     var body: some View {
         
         VStack{
@@ -47,7 +46,6 @@ struct EditWorkerView: View {
                 VStack(alignment: .trailing) {
                     NavigationLink(destination: {
                         EditAdressView(worker: worker, name: name, selectPlace: $selectPlace, tempSelectPlace: selectPlace)
-                        
                     }, label: {
                         TextField((!selectPlace.name.isEmpty) ? "Adress is checked" : "Adress", text: $adress)
                             .multilineTextAlignment(.leading)
@@ -66,10 +64,8 @@ struct EditWorkerView: View {
                 Spacer()
                 
                 Picker("Factory", selection: $factoryIndex) {
-                    
                     if factories.isEmpty {
                         Text("No Factories")
-                        
                     } else {
                         ForEach(0 ..< factories.count, id: \.self){ index in
                             Text(factories[index].factoryName).tag(index)
@@ -84,7 +80,6 @@ struct EditWorkerView: View {
             
             HStack {
                 Button {
-                    //
                     dismiss()
                 } label: {
                     Text("Cancel")
@@ -94,7 +89,6 @@ struct EditWorkerView: View {
                 Spacer()
                 
                 Button {
-                    //
                     worker.name = name
                     worker.phone = phone
                     worker.adress = selectPlace
@@ -106,12 +100,9 @@ struct EditWorkerView: View {
                         }
                     }
                     dismiss()
-                    
                 } label: {
                     Text("Save")
                         .padding(.horizontal, 10)
-                    
-                    
                 }
                 .disabled(
                     
@@ -122,7 +113,6 @@ struct EditWorkerView: View {
                     factoryIndex == factories.firstIndex{$0 === worker.factory}!
                 )
                 .tint(.red)
-                
             }
             .padding(.vertical)
             .buttonStyle(.borderedProminent)

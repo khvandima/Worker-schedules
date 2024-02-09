@@ -24,7 +24,6 @@ struct AdWorkerView: View {
     
     var body: some View {
         NavigationStack {
-            
             VStack (alignment: .trailing) {
                 Section {
                     
@@ -96,7 +95,6 @@ struct AdWorkerView: View {
                     context.insert(worker)
                     worker.factory = factories[factoryIndex]
                     factories[factoryIndex].workers.append(worker)
-                    
                     dismiss()
                 } label: {
                     Text("Save")

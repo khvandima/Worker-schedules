@@ -36,9 +36,7 @@ struct EditAdressView: View {
         NavigationStack {
             MapReader { proxy in
                 Map(position: $startPosition) {
-                    
                     Marker(selectPlace.name, coordinate: CLLocationCoordinate2D(latitude: tempSelectPlace.latitude, longitude: tempSelectPlace.longitude))
-                    
                 }
                 .navigationBarBackButtonHidden(true)
                 .toolbar(.hidden, for: .tabBar)
@@ -59,7 +57,6 @@ struct EditAdressView: View {
                             }, label: {
                                 Image(systemName: "arrow.left.circle")
                                     .font(.largeTitle)
-                                
                             })
                             Spacer()
                         }
@@ -67,8 +64,6 @@ struct EditAdressView: View {
                     }
                     .padding(.horizontal)
                 }
-                
-                
                 .overlay(alignment: .bottom) {
                     VStack {
                         TextField("Search for a location... ", text: $searchText)
@@ -79,12 +74,10 @@ struct EditAdressView: View {
                             .shadow(radius: 16)
                             .focused($isFocused)
                             .onChange(of: isFocused) { oldValue, newValue in
-                                
                                 withAnimation(.easeIn) {
                                     searchButtonView = false
                                 }
                             }
-                        
                         if searchButtonView {
                             HStack {
                                 Button(action: {
@@ -111,9 +104,7 @@ struct EditAdressView: View {
                                 .tint(.red)
                                 .cornerRadius(12)
                             }
-                            
                         }
-                        
                     }
                 }
                 // При вводе текста и нажатии Enter запускается метод searchPlaces
@@ -122,7 +113,6 @@ struct EditAdressView: View {
                 }
             }
             .toolbar(.hidden, for: .tabBar)
-            
         }
     }
 }

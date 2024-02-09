@@ -27,20 +27,16 @@ struct InThisWeekPage: View {
                                     .stroke(factory.hexColor.opacity(0.4), lineWidth: 1)
                             )
                     })
-                    
                 }
-                
             }
             .navigationTitle("ON THIS WEEK")
         }
     }
 }
 
-
 #Preview {
     InThisWeekPage()
 }
-
 
 struct InThisWeekCard: View {
     
@@ -99,7 +95,6 @@ struct InThisWeekCard: View {
             newNightWorkers = nightWorkers
         }
     }
-    
     
     var dayWorkers: [Worker] {
         return factory.workers.filter{$0.isDay}

@@ -24,7 +24,6 @@ class Worker {
         self.isDay = isDay
         self.isTaping = isTaping
     }
-    
 }
 
 struct Location: Codable, Equatable, Identifiable, Hashable {

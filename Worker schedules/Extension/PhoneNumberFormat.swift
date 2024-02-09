@@ -25,7 +25,6 @@ extension String {
                 result.append(char)
             }
         }
-        
         return result
     }
 }

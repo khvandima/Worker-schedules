@@ -44,11 +44,7 @@ struct SearchAdressView: View {
                         withAnimation(.easeInOut(duration: 0.3)) {
                             searchButtonView = true
                         }
-                        
-                        //TODO: Remove
-                        print(selectPlace)
                     }
-                    print(position)
                 }
                 // Полe поиска TextField
                 .overlay(alignment: .topLeading) {
@@ -60,7 +56,6 @@ struct SearchAdressView: View {
                             }, label: {
                                 Image(systemName: "arrow.left.circle")
                                     .font(.largeTitle)
-                                
                             })
                             Spacer()
                         }
@@ -68,8 +63,6 @@ struct SearchAdressView: View {
                     }
                     .padding(.horizontal)
                 }
-                
-                
                 .overlay(alignment: .bottom) {
                     VStack {
                         TextField("Search for a location... ", text: $searchText)
@@ -80,12 +73,10 @@ struct SearchAdressView: View {
                             .shadow(radius: 16)
                             .focused($isFocused)
                             .onChange(of: isFocused) { oldValue, newValue in
-                                
                                 withAnimation(.easeIn) {
                                     searchButtonView = false
                                 }
                             }
-                        
                         if searchButtonView {
                             HStack {
                                 Button(action: {
@@ -112,9 +103,7 @@ struct SearchAdressView: View {
                                 .tint(.red)
                                 .cornerRadius(12)
                             }
-                            
                         }
-                        
                     }
                 }
                 // При вводе текста и нажатии Enter запускается метод searchPlaces
@@ -125,7 +114,6 @@ struct SearchAdressView: View {
             .toolbar(.hidden, for: .tabBar)
         }
     }
-    
 }
 
 extension SearchAdressView {

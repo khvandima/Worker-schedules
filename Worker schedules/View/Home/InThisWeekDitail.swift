@@ -30,20 +30,15 @@ struct InThisWeekDitail: View {
         ZStack {
             VStack{
                 Map(position: $cameraPosition, selection: $mapSelection) {
-                    
-                    
-                    
+
                     if tabSelectedValue == 0 {
-                        
                         ForEach(resultsDayItems, id: \.self) { item in
                             let placemark = item.placemark
-   
                             Marker(placemark.name ?? "", coordinate: placemark.coordinate)
                         }
                     } else {
                         ForEach(resultsNightItems, id: \.self) { item in
                             let placemark = item.placemark
-
                             Marker(placemark.name ?? "", coordinate: placemark.coordinate)
                         }
                     }
@@ -93,12 +88,10 @@ struct InThisWeekDitail: View {
                                             Spacer()
                                             
                                             Button {
-                                                //
                                                 guard let url = URL(string: "tel:\(worker.name)") else { return }
 //                                                Link(worker.name, destination: url)
                                                 
         //                                        UIApplication.shared.open(url)
-                                                
                                             } label: {
                                                 Image(systemName: "phone.circle")
                                                     .font(.title)
@@ -115,9 +108,7 @@ struct InThisWeekDitail: View {
                                             withAnimation(.easeIn) {
                                                 mapSelection = mapSelectionTemp
                                             }
-                                            
                                         }
-                                        
                                     }
                                 }
                             }
@@ -149,7 +140,10 @@ struct InThisWeekDitail: View {
                                             Spacer()
                                             
                                             Button {
-                                                //
+                                                guard let url = URL(string: "tel:\(worker.name)") else { return }
+//                                                Link(worker.name, destination: url)
+                                                
+        //                                        UIApplication.shared.open(url)
                                             } label: {
                                                 Image(systemName: "phone.circle")
                                                     .font(.title)
@@ -193,7 +187,6 @@ struct InThisWeekDitail: View {
         }
         .onAppear{
             addResItemsArr()
-            
         }
     }
     

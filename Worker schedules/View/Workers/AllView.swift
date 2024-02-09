@@ -47,13 +47,10 @@ struct AllView: View {
                                         .padding(.horizontal)
                                         .font(.subheadline)
                                     Button {
-                                        //
-                                                                                
                                         guard let url = URL(string: "tel:\(worker.name)") else { return }
                                         Link(worker.name, destination: url)
                                         
-//                                        UIApplication.shared.open(url)
-                                        
+//                                        UIApplication.shared.open(url)  
                                     } label: {
                                         Image(systemName: "phone.circle")
                                             .font(.title)
@@ -70,10 +67,6 @@ struct AllView: View {
                                 context.delete(worker)
                             }
                         })
-                        
-                        
-                        
-                        
                     }
                     .listRowSeparator(.hidden)
                 }
@@ -83,7 +76,6 @@ struct AllView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink {
                         AdWorkerView()
-                        
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.title2)
@@ -91,7 +83,6 @@ struct AllView: View {
                     }
                 }
             }
-            
         }
         .searchable(text: $searchText)
         

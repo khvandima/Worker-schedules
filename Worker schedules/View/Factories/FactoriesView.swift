@@ -15,7 +15,6 @@ struct FactoriesView: View {
     @State private var showSheet = false
     
     var body: some View {
-        
         NavigationStack{
             ZStack {
                 if factories.isEmpty {
@@ -41,7 +40,6 @@ struct FactoriesView: View {
                                         .background(LinearGradient(colors: [factory.hexColor.opacity(0.15), factory.hexColor.opacity(0.55)], startPoint: .bottomLeading, endPoint: .topTrailing))
                                         .clipShape(RoundedRectangle(cornerRadius: 8))
                                 })
-                                
                             }
                         }
                     }
@@ -60,9 +58,7 @@ struct FactoriesView: View {
                 }
             }
             .sheet(isPresented: $showSheet, content: {
-                
                 AddFactory()
-                
                 // Изменение цвета заднего фона при появлении sheet
                 .onAppear {
                     setWindowBackgroundColor(.black) // Set the background color behind the sheet
@@ -71,10 +67,8 @@ struct FactoriesView: View {
                     setWindowBackgroundColor(.white) // Reset the background color when the sheet is dismissed
                 }
             })
-            
         }
     }
-    
     // Функция для изменение цвета заднего фона при появлении sheet
     private func setWindowBackgroundColor(_ color: UIColor) {
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
@@ -88,7 +82,6 @@ struct FactoriesView: View {
 //#Preview {
 //    FactoriesView()
 //}
-
 
 struct FactoryCard: View {
     
@@ -104,18 +97,13 @@ struct FactoryCard: View {
                 Text(factoryName) //Text(factory.factoryName)
                     .font(.title)
                     .fontWeight(.bold)
-                
                 Spacer()
-                
-                
             }
             if !factory.workers.isEmpty {
                 Text("\(workersCount) 명") //Text("\(factory.workers.count) 명")
                     .font(.title2)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             }
-            
-            
         }
         .frame(height: 60)
         .padding()
@@ -125,7 +113,6 @@ struct FactoryCard: View {
         }
     }
 }
-
 
 //#Preview {
 //    let preview = Preview(Factory.self)
