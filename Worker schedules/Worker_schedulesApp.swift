@@ -17,4 +17,9 @@ struct Worker_schedulesApp: App {
         }
         .environment(\.colorScheme, .dark)
     }
+    
+    // Выводит в консоль адрес локального хранения созданной базы данных на компьютере при разработке
+    init() {
+            print(URL.applicationSupportDirectory.path(percentEncoded: false))
+        }
 }

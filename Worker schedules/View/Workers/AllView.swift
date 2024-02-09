@@ -10,9 +10,12 @@ import SwiftData
 
 struct AllView: View {
     
-    @Query(sort: \Worker.name, animation: .snappy) private var workers: [Worker]
+    @Environment(\.modelContext) private var context
     
-    @State private var showSheet = false
+    @Query(sort: \Worker.factory?.factoryName, animation: .snappy) private var workers: [Worker]
+    
+    @State private var showingDeleteAlert = false
+    @State private var searchText = ""
     
     var body: some View {
         NavigationStack {
@@ -31,72 +34,80 @@ struct AllView: View {
                     }
                 } else {
                     List {
-                        ForEach(workers) {worker in
+                        ForEach(filteredWorkers) {worker in
                             NavigationLink {
-                                EditWorkerView(worker: worker)
+                                EditWorkerView(worker: worker, selectPlace: worker.adress)
                             } label: {
                                 HStack {
                                     Text(worker.name)
-                                        .font(.title)
-                                        .fontWeight(.bold)
+                                        .font(.title2)
+                                        .fontWeight(.bold)                                    
                                     Spacer()
-                                    Text(worker.factory?.factoryName ?? "wideKorea")
+                                    Text(worker.factory?.factoryName ?? "WK")
                                         .padding(.horizontal)
-                                        .font(.headline)
+                                        .font(.subheadline)
                                     Button {
                                         //
+                                                                                
+                                        guard let url = URL(string: "tel:\(worker.name)") else { return }
+                                        Link(worker.name, destination: url)
+                                        
+//                                        UIApplication.shared.open(url)
+                                        
                                     } label: {
                                         Image(systemName: "phone.circle")
                                             .font(.title)
                                             .foregroundStyle(Color.green)
                                             .padding(.horizontal)
                                             .imageScale(.large)
-                                    }
+                                    }.buttonStyle(PlainButtonStyle())
                                 }
-                            } 
+                            }
                         }
+                        .onDelete(perform: { indexSet in
+                            indexSet.forEach { index in
+                                let worker = workers[index]
+                                context.delete(worker)
+                            }
+                        })
+                        
+                        
+                        
+                        
                     }
+                    .listRowSeparator(.hidden)
                 }
             }
             .navigationTitle("All")
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        showSheet.toggle()
-                    }, label: {
+                    NavigationLink {
+                        AdWorkerView()
+                        
+                    } label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.title2)
                             .foregroundStyle(Color.plusButton)
-                    })
+                    }
                 }
             }
-            .sheet(isPresented: $showSheet, content: {
-                AdWorkerSheetView()
-                
-                
-                    // Изменение цвета заднего фона при появлении sheet
-                    .onAppear {
-                        setWindowBackgroundColor(.black) // Set the background color behind the sheet
-                    }
-                    .onDisappear {
-                        setWindowBackgroundColor(.white) // Reset the background color when the sheet is dismissed
-                    }
-            })
+            
         }
-    }
-    
-    // Функция для изменение цвета заднего фона при появлении sheet
-    private func setWindowBackgroundColor(_ color: UIColor) {
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-            let window = windowScene.windows.first
-        {
-            window.backgroundColor = color
+        .searchable(text: $searchText)
+        
+        // Вычисляемое значение для поиска
+        var filteredWorkers: [Worker] {
+            if searchText.isEmpty {
+                return workers
+            } else {
+                return workers.filter{ $0.name.localizedCaseInsensitiveContains(searchText)}
+            }
         }
     }
 }
 
-#Preview {
-    AllView()
-}
-
-
+//#Preview {
+//    AllView()
+//        .modelContainer(for: Worker.self, inMemory: true)
+//}
+//
