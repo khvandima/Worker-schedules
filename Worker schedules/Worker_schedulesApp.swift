@@ -14,8 +14,10 @@ struct Worker_schedulesApp: App {
         WindowGroup {
             ContentView()
                 .modelContainer(for: [Worker.self, Factory.self])
+                .preferredColorScheme(.dark)
         }
         .environment(\.colorScheme, .dark)
+        
     }
     
     // Выводит в консоль адрес локального хранения созданной базы данных на компьютере при разработке
