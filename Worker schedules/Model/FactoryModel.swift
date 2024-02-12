@@ -17,6 +17,7 @@ class Factory {
     var color: String
     var isAuto = false
     var dayOnly = false
+    var isChangedToday = false
     
     init(factoryName: String, color: String) {
         self.factoryName = factoryName

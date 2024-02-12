@@ -41,12 +41,16 @@ struct ContentView: View {
             let calendar = Calendar(identifier: .gregorian)
             let weekDay = calendar.component(.weekday, from: Date())
             for factory in factories {
-                if weekDay == 1 {
+                if weekDay == 1 && !factory.isChangedToday{
                     if !factory.dayOnly && factory.isAuto {
                         for worker in factory.workers {
                             worker.isDay.toggle()
                         }
+                        factory.isChangedToday = true
                     }
+                }
+                if weekDay == 2 {
+                    factory.isChangedToday = false
                 }
                 
             }
