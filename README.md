@@ -43,6 +43,7 @@ Worker-schedules/
  ├─ Views/           # Screens for workers, companies, factories, chats
  ├─ Services/        # Mock data, helpers, routing
  └─ Resources/       # Assets, configuration
+```
 
 
 ▶️ Running the App
